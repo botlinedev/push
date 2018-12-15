@@ -36,6 +36,9 @@ function sendFlex() {
     console.log('has url')
     message = image + ' ' + url + ' ' + text;
   }
+  $("#image").val("");
+  $("#url").val("");
+  $("#text").val("");
   body = { "to": "1", "message": message };
   $.ajax({
       type: 'POST',
